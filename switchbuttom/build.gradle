@@ -3,7 +3,26 @@ plugins {
     id 'maven-publish'
 }
 
-group = 'com.github.wamsai1096'
+ext {
+    LIBRARY_GROUP_ID     = 'com.github.wamsai1096'
+    LIBRARY_ARTIFACT_ID  = 'switchbutton'
+    LIBRARY_VERSION_NAME = '0.0.4'
+    LIBRARY_VERSION_CODE = 4
+}
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = LIBRARY_GROUP_ID
+            artifactId = LIBRARY_ARTIFACT_ID
+            version = LIBRARY_VERSION_NAME
+
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
+}
 
 android {
     namespace 'io.wamsai1096.switchbuttom'
@@ -12,6 +31,8 @@ android {
     defaultConfig {
         minSdk 16
         targetSdk 33
+        versionCode project.LIBRARY_VERSION_CODE
+        versionName project.LIBRARY_VERSION_NAME
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
