@@ -6,8 +6,8 @@ plugins {
 ext {
     LIBRARY_GROUP_ID     = 'com.github.wamsai1096'
     LIBRARY_ARTIFACT_ID  = 'switchbutton'
-    LIBRARY_VERSION_NAME = '0.0.4'
-    LIBRARY_VERSION_CODE = 4
+    LIBRARY_VERSION_NAME = '0.0.6'
+    LIBRARY_VERSION_CODE = 6
 }
 
 publishing {
@@ -26,11 +26,11 @@ publishing {
 
 android {
     namespace 'io.wamsai1096.switchbuttom'
-    compileSdk 33
+    compileSdk 30
 
     defaultConfig {
         minSdk 16
-        targetSdk 33
+        targetSdk 30
         versionCode project.LIBRARY_VERSION_CODE
         versionName project.LIBRARY_VERSION_NAME
 
