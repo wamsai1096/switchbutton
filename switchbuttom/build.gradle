@@ -6,8 +6,8 @@ plugins {
 ext {
     LIBRARY_GROUP_ID     = 'com.github.wamsai1096'
     LIBRARY_ARTIFACT_ID  = 'switchbutton'
-    LIBRARY_VERSION_NAME = '0.0.6'
-    LIBRARY_VERSION_CODE = 6
+    LIBRARY_VERSION_NAME = '0.0.7'
+    LIBRARY_VERSION_CODE = 7
 }
 
 publishing {
@@ -52,7 +52,6 @@ android {
 
 dependencies {
 
-    implementation 'androidx.appcompat:appcompat:1.6.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
